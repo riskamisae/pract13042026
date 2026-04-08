@@ -1,0 +1,59 @@
+.head-link a {
+    background-color: #f7ede2;
+    border-radius: 7px;
+    transition: all ease-in-out .3s;
+    padding: 6px;
+    text-decoration: none;
+    color: #84A59D;
+    font-size: 20px;
+    font-family: Montserrat;
+}
+
+.header {
+    background-color: rgba(132, 165, 157, .3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    align-items: center;
+}
+
+body {
+  margin: 0 !important;
+}
+
+.logo {
+    font-size: 34px;
+    color: #F28482;
+    font-family: Montserrat;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.content-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.head-link a:hover {
+    box-shadow: 2px 2px 3px rgba(245, 202, 195, .8);
+}
+
+.head-side {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.out-button {
+    background-color: #F28482;
+    color: #f7ede2;
+    font-size: 20px;
+    font-family: Montserrat;
+    border: none;
+    border-radius: 7px;
+    padding: 6px;
+    text-decoration: none;
+}
