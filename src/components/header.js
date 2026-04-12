@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./Header.css"; // <-- импорт стилей
+import "./Header.css"; 
 
 function Header({ user, setUser }) {
   const location = useLocation();
@@ -41,12 +41,12 @@ function Header({ user, setUser }) {
                   {user.username}
                 </Link>
               </div>
-              <button className="out-button" onClick={handleLogout}>
+              <button class="out-button" onClick={handleLogout}>
                 Выйти
               </button>
             </>
           ) : (
-            <div className="head-link">
+            <div class="head-link">
               <Link to="/auth" style={isActive("/auth")}>
                 Вход / Регистрация
               </Link>

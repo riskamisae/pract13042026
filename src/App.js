@@ -10,10 +10,8 @@ import Orders from "./pages/orders";
 function App() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")) || null);
 
-  // Добавляем корзину
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
 
-  // Функция добавления букета в корзину
   const addToCart = (bouquet) => {
     const newCart = [...cart, bouquet];
     setCart(newCart);
