@@ -10,7 +10,7 @@ function Orders({ user }) {
     if (!token || !user) return;
 
     axios.get(
-      `http://localhost:1337/api/orders?filters[user][$eq]=${user.name}&populate=user`,
+      `http://localhost:1337/api/orders?${user.name}&populate=user`,
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -28,8 +28,8 @@ function Orders({ user }) {
   if (!user) return <p>Вы не авторизованы</p>;
 
   return (
-    <div className="content-wrapper" style={{ padding: "20px" }}>
-      <h1 className="home_header">Ваши заказы</h1>
+    <div class="content-wrapper" style={{ padding: "20px" }}>
+      <h1 class="home_header">Ваши заказы</h1>
 
       {orders.length === 0 ? (
         <p>У вас пока нет заказов</p>
@@ -37,7 +37,7 @@ function Orders({ user }) {
         <ul>
           {orders.map((order) => (
             <li style={styles.items} key={order.id}>
-              <h3 style={{ fontWeight: "400" }}>{order.order_name}</h3>
+              <h3 style={{fontWeight: "400"}}>{order.order_name}</h3>
 
               <ul style={{ fontSize: "12px", color: "#F28482" }}>
                 {order.items.map((item, i) => (
@@ -47,9 +47,7 @@ function Orders({ user }) {
                 ))}
               </ul>
 
-              <p style={{ fontSize: "16px", fontWeight: "600" }}>
-                {order.tota_price}₽
-              </p>
+              <p style={{fontSize: "16px", fontWeight: "600"}}>{order.tota_price}₽</p>
             </li>
           ))}
         </ul>
